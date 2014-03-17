@@ -40,7 +40,27 @@ src: url(SEGOEUI.TTF)
 
 <p id="welcomeInfo" style="padding-left:15px; font-size: 96px; position:absolute; top:-50px; " >Kids Library</p></div>
 
-<h1 id="homeTitle" style=" width:1024px; height: 45px; position:absolute; top:-21px;background-color:#800080; color:#FFF; font-family: SegoePrint; font-size: 28px; "> <p id="welcomeMsg" style=" position:absolute; top: -33px; padding-left:15px">Welcome to the [schoolname] Library System: </p></h1>
+
+
+<h1 id="homeTitle" style=" width:1024px; height: 45px; position:absolute; top:-21px;background-color:#800080; color:#FFF; font-family: SegoePrint; font-size: 28px; "> <p id="welcomeMsg" style=" position:absolute; top: -33px; padding-left:15px">Welcome to the  Library System: </p></h1>
+
+<script>if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","schoolConfig.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.getElementById("homeTitle").innerHTML=
+"Welcome to the "+xmlDoc.getElementsByTagName("schoolName")[0].childNodes[0].nodeValue +" Library!";
+
+</script>
+
 
 <div id="leftSideFirstPage" style="width:55%; position:absolute; left:15px; top:60px;">
 <h2 id="aboutLibrary" style="font-family:SegoePrint;">About this library</h2>
