@@ -38,11 +38,11 @@ src: url(SEGOEUI.TTF)
 
 <div id="schoolLogo" style="background-color: #0C6; background-image: url(images/greenbackground.jpg); background-repeat:repeat; position: absolute; left: 0px; top: -200px; font-weight: bold; color: #000; height: 200px; width: 1024px;  text-align:left; font-family:KBKids;"> 
 
-<p id="welcomeInfo" style="padding-left:15px; font-size: 96px; position:absolute; top:-50px; " >Kids Library</p></div>
+<p id="welcomeInfo" style="padding-left:20px; font-size: 96px; position:absolute; top:-50px; " >Kids Library</p></div>
 
 
 
-<h1 id="homeTitle" style=" width:1024px; height: 45px; position:absolute; top:-21px;background-color:#800080; color:#FFF; font-family: SegoePrint; font-size: 28px; "> <p id="welcomeMsg" style=" position:absolute; top: -33px; padding-left:15px">Welcome to the  Library System: </p></h1>
+<h1 id="homeTitle" style=" width:1024px; height: 45px; position:absolute; top:-21px;background-color:#800080; color:#FFF; font-family: SegoePrint; font-size: 28px; "> <p id="welcomeMsg" style=" position:absolute; top: -30px; left:15px">No welcome messeage!</p></h1>
 
 <script>if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -56,7 +56,7 @@ xmlhttp.open("GET","schoolConfig.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
-document.getElementById("homeTitle").innerHTML=
+document.getElementById("welcomeMsg").innerHTML=
 "Welcome to the "+xmlDoc.getElementsByTagName("schoolName")[0].childNodes[0].nodeValue +" Library!";
 
 </script>
@@ -73,8 +73,8 @@ document.getElementById("homeTitle").innerHTML=
 <h2 id="loginFirstPage" style="text-align:left; position:absolute; padding-left: 25px; top: -10px; font-family:SegoePrint; font-size:28px; color:#FFF;">Login</h2>
 
 <form action="" method="get" style="text-align:left; position:absolute; top:90px; padding-left:25px; font-family: SegoeUI; font-size: 18px; color:#FFF;">
-<div id="feildDescriptions" style=" margin-bottom:-15px;">Username:</div><br /><input type="text" name="username" style="height: 30px; width: 300px; border-radius: 10px;" /><br /><br />
-<div id="feildDescriptions" style=" margin-bottom:-15px;">Password:</div> <br /><input type="password" name="pwd" style="height: 30px; width: 300px; border-radius: 10px;" /><br /><br /><br />
+<div id="feildDescriptions" style=" margin-bottom:-15px;">Username:</div><br /><input type="text" name="username" value="Enter your username here!" style="height: 30px; width: 300px; border-radius: 10px;" /><br /><br />
+<div id="feildDescriptions" style=" margin-bottom:-15px;">Password:</div> <br /><input type="password" name="pwd" value="Enter your password here!" style="height: 30px; width: 300px; border-radius: 10px;" /><br /><br /><br />
 <input type="submit" name="submit" value="Login"  style="font-size:20px; height: 50px; width: 300px; border-radius: 10px; background-color:#96E005;"/>
 </form> 
 <div id="forgotPassword" style="color:#fff; font-family: SegoeUI; position:absolute; left: 100px;top:360px;">Forgot your password?</div>
