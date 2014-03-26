@@ -2,41 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <title>Library Perfect: Home</title>
 
-<style>
-
-@font-face
-{
-font-family: KBKids;
-src:url(KBPlanetEarth.ttf)
-}
-
-@font-face
-{
-font-family: SegoePrint;
-src:url(SEGOEPR.TTF)
-}
-
-@font-face
-{
-font-family: SegoeUI;
-src: url(SEGOEUI.TTF)
-}
-
-</style>
 </head>
 
-<body style=" background-color:#2E75B6; background-repeat:no-repeat;">
+<body>
+<div id="mainContainer">
 
-
-
-
-<div id="mainContainer"style=" position:relative;width:1024px;height:750px;margin-left:auto; margin-right:auto; margin-top:200px;background-color:#fff;">
-
-
-<div id="schoolLogo" style="background-color: #0C6; background-image: url(images/greenbackground.jpg); background-repeat:repeat; position: absolute; left: 0px; top: -200px; font-weight: bold; color: #000; height: 200px; width: 1024px;  text-align:left; font-family:KBKids;"> 
+<div id="schoolLogo"> 
 
 <p id="welcomeInfo" style="padding-left:20px; font-size: 96px; position:absolute; top:-50px; " >Kids Library</p></div>
 
@@ -45,11 +20,11 @@ src: url(SEGOEUI.TTF)
 <h1 id="homeTitle" style=" width:1024px; height: 45px; position:absolute; top:-21px;background-color:#800080; color:#FFF; font-family: SegoePrint; font-size: 28px; "> <p id="welcomeMsg" style=" position:absolute; top: -30px; left:15px">No welcome messeage!</p></h1>
 
 <script>if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  {
   xmlhttp=new XMLHttpRequest();
   }
 else
-  {// code for IE6, IE5
+  {
   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
 xmlhttp.open("GET","schoolConfig.xml",false);
