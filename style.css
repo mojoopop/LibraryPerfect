@@ -1,49 +1,92 @@
 @charset "UTF-8";
 /* CSS Document */
-@font-face
-{
+@font-face {
 	font-family: KBKids;
-	src:url(KBPlanetEarth.ttf)
+	src: url(KBPlanetEarth.ttf)
 }
-
-@font-face
-{
+@font-face {
 	font-family: SegoePrint;
-	src:url(SEGOEPR.TTF)
+	src: url(SEGOEPR.TTF)
 }
-
-@font-face
-{
+@font-face {
 	font-family: SegoeUI;
 	src: url(SEGOEUI.TTF)
 }
-
-body{
-	background-color:#2E75B6; 
-	background-repeat:no-repeat;
-	
+body {
+	background-color: #2E75B6;
+	background-repeat: no-repeat;
 }
-
-#mainContainer{
-	position:relative;
-	width:1024px;
-	height:750px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:200px;
-	background-color:#fff;	
+#mainContainer {
+	position: relative;
+	width: 1024px;
+	height: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	background-color: #fff;
 }
-
-#schoolLogo{
-background-color: #0C6; 
-background-image: url(images/greenbackground.jpg); 
-background-repeat:repeat; 
-position: absolute; left: 0px; 
-top: -200px; 
-font-weight: bold; 
-color: #000; 
-height: 200px; 
-width: 1024px; 
-text-align:left; 
-font-family:KBKids;	
+#schoolLogo {
+	background-color: #0C6;
+	background-image: url(images/greenbackground.jpg);
+	background-repeat: repeat;
+	position: absolute;
+	left: 0px;
+	top: -200px;
+	font-weight: bold;
+	color: #000;
+	height: 200px;
+	width: 1024px;
+	text-align: left;
+	font-family: KBKids;
+}
+#welcomeMsgContainer {
+	width: 1024px;
+	height: 45px;
+	position: absolute;
+	top: -21px;
+	background-color: #800080;
+	color: #FFF;
+	font-family: SegoePrint;
+	font-size: 28px;
+}
+#welcomeMsg {
+	position: absolute;
+	top: -30px;
+	left: 15px;
+}
+#leftSideFirstPage {
+	width: 55%;
+	position: absolute;
+	left: 15px;
+	top: 60px;
+}
+#aboutLibrary {
+	font-family: SegoePrint;
+}
+#aboutDescription {
+	font-family: SegoeUI;
+	font-size: 18px;
+}
+#rightSideFirstPage {
+	width: 42%;
+	position: absolute;
+	right: 15px;
+	top: 60px;
+}
+#loginContainer {
+	background-color: #2E75B6;
+	height: 450px;
+	width: 350px;
+	position: absolute;
+	right: 20px;
+	top: 25px;
+}
+#loginFirstPage {
+	text-align: left;
+	position: absolute;
+	padding-left: 25px;
+	top: -10px;
+	font-family: SegoePrint;
+	font-size: 28px;
+	color: #FFF;
 }
