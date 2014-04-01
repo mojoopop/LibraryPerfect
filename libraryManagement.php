@@ -4,15 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Library Management</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="SpryAssets/SpryDOMUtils.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
 </head>
 
 <body style=" background-color:#2E75B6; background-repeat:no-repeat;">
-
 <div id="mainContainer">
-
-<div id="pageTitle">Library Management</div>
-
-
+  <div id="schoolLogo">
+    <p id="pageTitle" style="padding-left:20px; font-size: 96px; position:absolute; top:-50px; " >Kids Library</p>
+  </div>
+  <h1 id="welcomeMsgContainer">
+    <p id="welcomeMsg">Library Management!</p>
+  </h1>
+  <div id="manageTeachersChooser" class="chooserBox"></div>
+  <div id="manageClassroomsChooser" class="chooserBox"></div>
+  <div id="manageStudentsChooser" class="chooserBox"></div>
+  <div id="manageBooksChooser" class="chooserBox"></div>
 </div>
 </body>
 </html>
