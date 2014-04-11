@@ -7,6 +7,26 @@
 <script src="SpryAssets/SpryDOMUtils.js" type="text/javascript"></script>
 <script src="index.js" type="text/javascript"></script>
 <script src="libraryManagement.js" type="text/javascript"></script>
+<script type="application/x-javascript">
+function getTeacherListTable(){
+	
+	var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("contentContainer").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","libraryPageDB.php",true);
+xmlhttp.send();
+	
+}
+
+</script>
+
+
+<?php include 'libraryPageDB.php'; ?>
 </head>
 
 <body style=" background-color:#2E75B6; background-repeat:no-repeat;">
@@ -28,13 +48,17 @@
     <h1 id="managerIconTitle">Manage Students</h1>
   </div>
   
-  <div id="manageClassroomsChooser" class="chooserBox"><img id="managerIcons" src="images/managerIcons/manageClassroomIcon.png" height="200px"/>
+  <div id="manageClassroomsChooser" class="chooserBox" onclick="getTeacherListTable()"><img id="managerIcons" src="images/managerIcons/manageClassroomIcon.png" height="200px"/>
     <h1 id="managerIconTitle">Manage Classrooms</h1>
   </div>
   
   <div id="manageBooksChooser" class="chooserBox"><img id="managerIcons" src="images/managerIcons/bookManagerIcon.png" height="200px"/>
     <h1 id="managerIconTitle">Manage Books</h1>
   </div>
+  
+
+  
+  
   
   </div>
   

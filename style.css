@@ -92,12 +92,10 @@ body {
 }
 #manageTeachersChooser {
 	position: absolute;
-	
 	left: 220px;
 }
 #manageClassroomsChooser {
 	position: absolute;
-	
 	right: 220px;
 }
 #manageStudentsChooser {
@@ -109,7 +107,7 @@ body {
 	position: absolute;
 	top: 300px;
 	right: 220px;
-	display:inline;
+	display: inline;
 }
 .chooserBox {
 	background-color: #2E75B6;
@@ -117,7 +115,6 @@ body {
 	height: 250px;
 	border-radius: 30px;
 	text-align: center;
-	
 }
 #managerIcons {
 	margin-top: 10px;
@@ -131,4 +128,10 @@ body {
 #linkManagerStyle {
 	text-decoration: none;
 	color: inherit;
+}
+table, th, td {
+	border: 1px solid black;
+}
+table {
+	border-collapse: collapse;
 }
