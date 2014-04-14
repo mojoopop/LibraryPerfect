@@ -1,4 +1,4 @@
-<?php 
+<?
 
 
 
@@ -23,6 +23,5 @@ while($row = mysqli_fetch_array($result))
 echo "</table>";
 
 mysqli_close($con);
-
 
 ?>
