@@ -25,12 +25,7 @@
 
                 function showDiv() {
                     document.getElementById('emailDiv').style.display = "block";
-                }
-                
-                function showDiv2() {
-                    document.getElementById('teacherForm').style.display = 
-                            "block";
-                }      
+                }     
         </script>
         
     </head>
@@ -49,11 +44,11 @@
                 <p id="teacherPicture" style="width: 275px; height: 183px; background-image: url(images/teacher.jpg); background-repeat: no-repeat; position: relative; left: 25px; top: 90px;"></p>
             </div>
 
-            <div id="teacherForm" style="background-color: #2E75B6; width: 500px; height: 85%; position: absolute; right: 25px; top: 80px; border: 5px solid black; border-radius: 2px; ">
+            <div id="teacherForm" style="background-color: #2E75B6; width: 55%; height: 80%; position: absolute; right: 25px; top: 80px; border: 5px solid black; border-radius: 2px; ">
                 
                     
                 <h2 id="studentManagement" style="font-family: KBKids; font-weight: bold; position: relative; left: 15px; font-size: 25px;">Student Management</h2>
-                
+                <div id="sManage" style="width: 85px; left: 25px; position: relative; border: 2px solid black;">
                 <?php           
                 mysql_connect('lb2014.db.8199569.hostedresource.com', 'lb2014', 'WebDev@014');
                 mysql_select_db('lb2014');
@@ -61,15 +56,16 @@
                 $sql = "SELECT fName FROM student";
                 $result = mysql_query($sql);
 
-                echo "<select name='fName'>";
+                echo "<select name='fName' >";
                 while ($row = mysql_fetch_array($result)) {
                     echo "<option value='" . $row['fName'] ."'>" . $row['fName'] ."</option>";
                 }
                 echo "</select>";
                 ?>
+                </div>
+                <h3 id="libManagement" style="font-family: KBKids; font-weight: bold; position: relative; left: 15px; font-size: 25px;">Library Management</h3>
                 
-                <h3 id="libManagement" style="font-family: KBKids; font-weight: bold; position: relative; left: 15px; font-size: 25px;">Student Management</h3>
-                
+                <div id="lManage" style="width: 137px; left: 25px; position: relative; border: 2px solid black;">
                 <?php           
                 mysql_connect('lb2014.db.8199569.hostedresource.com', 'lb2014', 'WebDev@014');
                 mysql_select_db('lb2014');
@@ -83,6 +79,8 @@
                 }
                 echo "</select>";
                 ?>
+                </div>
+               
                 
                 <h4 id="emailToParent" style="font-family: KBKids; font-weight: bold; position: relative; left: 15px; font-size: 25px;">Email a Parent</h4>
 
