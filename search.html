@@ -8,36 +8,7 @@
 <script src="index.js" type="text/javascript"></script>
       <script src="http://code.jquery.com/jquery-latest.js">
     </script>
-<script type="text/javascript">
-  
-$(document).ready(function(){
-    $('#search').on('keyup', function(){
-        $.ajax({
-            type: "GET",
-            url: "library.xml",
-            dataType: "xml",
-            success: parseXML
-        });
-    });
-});
-function parseXML(xml){
-    var searchFor = $('#search').val();
-    var reg = new RegExp(searchFor, "i");
-    $(xml).find('book').each(function(){
-        var author = $(this).find('author').text();
-        var authorSearch = title.search(reg);
-        var title = $(this).find('title').text();
-        var titleSearch = title.search(reg);
-        $('#output').empty();
-        if(authorSearch > -1){
-            $('#output').append('Found <i>'+searchFor+'<\/i> in author: '+title.replace(reg, '<b>'+searchFor+'</b>')+'<br \/>');
-        }
-        if(titleSearch > -1){
-            $('#output').append('Found <i>'+searchFor+'<\/i> in title: '+desc.replace(reg, '<b>'+searchFor+'</b>')+'<br \/>');
-        }
-    });    
-}
-</script>
+
     </head>
 
 <body>
@@ -51,17 +22,49 @@ function parseXML(xml){
   <div id="leftSideFirstPage">
     <h2 id="aboutLibrary">Search:</h2>
  <form>
-<input id="search" type="text" size="30" >
+<input id="search" type="text" size="30" autocomplete="off" >
 <input type="button" onclick="submit" value="search">
 
-<p id="output" ></p>
 </form>
   </div>
+  <p id="output" ></p>
+
   <!--end of left-->
   
   <div id="rightSideFirstPage">
    
   </div>
 </div>
+  <script type="text/javascript">
+  
+$(document).ready(function(){
+    $('#search').on('keyup', function(){
+        $.ajax({
+            type: "GET",
+            url: "library.xml",
+            dataType: "xml",
+            success: parseXML
+        });
+    });
+    });
+
+function parseXML(xml){
+    var searchFor = $('#search').val();
+    var reg = new RegExp(searchFor, "i");
+    $(xml).find('book').each(function(){
+        var author = $(this).find('author').text();
+        var authorSearch = title.search(reg);
+        var title = $(this).find('title').text();
+        var titleSearch = title.search(reg);
+        $('#output').empty();
+        if(authorSearch > -1){
+            $('#output').append('Found <i>'+searchFor+'<\/i> in author: '+author.replace(reg, '<b>'+searchFor+'</b>')+'<br \/>');
+        }
+        if(titleSearch > -1){
+            $('#output').append('Found <i>'+searchFor+'<\/i> in title: '+title.replace(reg, '<b>'+searchFor+'</b>')+'<br \/>');
+        }
+    });    
+}
+</script>
 </body>
 </html>
