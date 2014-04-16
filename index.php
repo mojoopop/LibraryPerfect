@@ -4,8 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Library Perfect: Home</title>
-<script src="SpryAssets/SpryDOMUtils.js" type="text/javascript"></script>
-<script src="index.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -15,6 +14,20 @@
   </div>
   <h1 id="welcomeMsgContainer">
     <p id="welcomeMsg">No welcome messeage!</p>
+    
+    <script type="text/javascript">	
+if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	}
+	else {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.open("GET", "schoolConfig.xml", false);
+	xmlhttp.send();
+	xmlDoc = xmlhttp.responseXML;
+
+	document.getElementById("welcomeMsg").innerHTML = "Welcome to the " + xmlDoc.getElementsByTagName("schoolName")[0].childNodes[0].nodeValue + " Library!";</script>
+    
   </h1>
   <div id="leftSideFirstPage">
     <h2 id="aboutLibrary">About this library</h2>

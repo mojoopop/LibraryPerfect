@@ -1,4 +1,4 @@
-Spry.Utils.addLoadListener(function() {
+
 	if (window.XMLHttpRequest) {
 		xmlhttp = new XMLHttpRequest();
 	}
@@ -13,4 +13,3 @@ Spry.Utils.addLoadListener(function() {
 
 
 
-});

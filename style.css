@@ -97,6 +97,7 @@ body {
 #manageClassroomsChooser {
 	position: absolute;
 	right: 220px;
+	display: block;
 }
 #manageStudentsChooser {
 	position: absolute;
@@ -107,8 +108,7 @@ body {
 	position: absolute;
 	top: 300px;
 	right: 220px;
-	
-
+	display: inline;
 }
 .chooserBox {
 	background-color: #2E75B6;
@@ -133,6 +133,19 @@ body {
 table, th, td {
 	border: 1px solid black;
 }
+th{
+	font-size:18px;
+	font-weight:bold;
+	background-color:#cccccc;
+	
+}
 table {
 	border-collapse: collapse;
+}
+#teachTable {
+	position: absolute;
+	left: 330px;
+	top:0px;
+	font-size:12px;
+	width:690px;
 }
