@@ -68,7 +68,7 @@ function chooserManager()
 		
 		}
 	};
-	/*clickClassrooms.onclick = function()
+	clickClassrooms.onclick = function()
 	{
 		if(hideClassrooms.style.display == "none")
 		{
@@ -80,8 +80,10 @@ function chooserManager()
 			hideStudents.style.display = 'none';
 			hideClassrooms.style.display = 'none';
 			hideTeachers.style.display = 'none';
+			
+			document.getElementById("contentContainer").innerHTML = "<select><option>CR1</option><option>CR2</option></select>";
 		}
-	};*/
+	};
 	clickStudents.onclick = function() 
 	{
 		if(hideStudents.style.display == "none") 
