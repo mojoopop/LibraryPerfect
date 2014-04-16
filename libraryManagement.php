@@ -68,7 +68,7 @@ function chooserManager()
 		
 		}
 	};
-	clickClassrooms.onclick = function()
+	/*clickClassrooms.onclick = function()
 	{
 		if(hideClassrooms.style.display == "none")
 		{
@@ -81,7 +81,7 @@ function chooserManager()
 			hideClassrooms.style.display = 'none';
 			hideTeachers.style.display = 'none';
 		}
-	};
+	};*/
 	clickStudents.onclick = function() 
 	{
 		if(hideStudents.style.display == "none") 
@@ -114,7 +114,7 @@ function chooserManager()
   <div id="contentContainer" style="position:absolute; top:100px;width:100%;">
   
   
-  <div id="manageTeachersChooser" class="chooserBox"><img id="managerIcons" src="images/managerIcons/teacherManager.png" height="200px"/>
+  <div id="manageTeachersChooser"  style="display:block; visibility:visible;" class="chooserBox"  onclick="chooserManager();"><img id="managerIcons" src="images/managerIcons/teacherManager.png" height="200px"/>
     <h1 id="managerIconTitle">Manage Teachers</h1>
   </div>
   
